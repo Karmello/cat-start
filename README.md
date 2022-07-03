@@ -44,7 +44,11 @@ apps/ask-the-world-fe/env/env.local -> apps/ask-the-world-fe/env/env
 /certs
 ```
 
-#### Run project in Docker
+#### Build and run the project
+
+```
+docker-compose build app
+```
 
 ```
 docker-compose up app

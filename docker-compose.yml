@@ -1,7 +1,10 @@
 version: "3.9"
+networks:
+  default:
+    name: atw-net
 services:
   db:
-    container_name: database
+    container_name: db
     image: mongo:5
     ports:
       - 27017:27017
@@ -19,3 +22,17 @@ services:
       - "9000:9000"
     volumes:
       - ./apps/ask-the-world-api/src:/usr/src/app/src
+  app:
+    depends_on:
+      - api
+    container_name: fe
+    image: node:16
+    working_dir: /usr/src/app
+    build:
+      context: .
+      dockerfile: apps/ask-the-world-fe/Dockerfile
+    command: yarn dev-server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/ask-the-world-fe/src:/usr/src/app/src
