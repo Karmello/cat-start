@@ -44,29 +44,14 @@ apps/ask-the-world-fe/env/env.local -> apps/ask-the-world-fe/env/env
 /certs
 ```
 
-#### Create network
+#### Run project in Docker
 
 ```
-docker network create atw-net
+docker-compose up app
 ```
 
-#### Run MongoDB
-
-```
-docker run -d -p 27017:27017 --name mongo --network atw-net mongo:latest
-```
-
-#### Build, run and verify API
-
-```
-docker build -t atw/api -f apps/ask-the-world-api/Dockerfile .
-```
-
-```
-docker run -d -p 9000:9000 --name ask-the-world-api --network atw-net atw/api
-```
+#### Verify API
 
 ```
 curl https://localhost:9000/info
 ```
-

@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  db:
+    container_name: database
+    image: mongo:5
+    ports:
+      - 27017:27017
+  api:
+    depends_on:
+      - db
+    container_name: api
+    image: node:16
+    working_dir: /usr/src/app
+    build:
+      context: .
+      dockerfile: apps/ask-the-world-api/Dockerfile
+    command: yarn start-local
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./apps/ask-the-world-api/src:/usr/src/app/src
