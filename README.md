@@ -44,18 +44,24 @@ Place certificates inside the repo
 /certs
 ```
 
+Create network
+
+```
+docker network create atw-net
+```
+
 Run MongoDB
 
 ```
-docker run -d -p 27017:27017 --name mongo mongo:latest
+docker run -d -p 27017:27017 --name mongo --network atw-net mongo:latest
 ```
 
 Build and run API
 
 ```
-docker build apps/ask-the-world-api -t atw/api
+docker build -t atw/api -f apps/ask-the-world-api/Dockerfile .
 ```
 
 ```
-docker run --name ask-the-world-api -p 9000:9000 -d atw/api
+docker run -d -p 9000:9000 --name ask-the-world-api --network atw-net atw/api
 ```
