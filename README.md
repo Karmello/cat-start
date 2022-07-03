@@ -3,7 +3,7 @@
 ## Initial steps
 
 - install Docker on your machine
-- create ssh key and provide it to the owner of the repo
+- create SSH key and provide it to the owner of the repo
 - ask for the env files and the certificates
 
 ## How to startup
