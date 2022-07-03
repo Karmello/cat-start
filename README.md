@@ -3,8 +3,8 @@
 ## Initial steps
 
 - install Docker on your machine
-- create SSH key and provide it to the owner of the repo
-- ask for the env files and the certificates
+- create SSH key and provide it to the owner of the repo (needed for cloning private repos)
+- ask for certificates
 
 ## How to startup
 
