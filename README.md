@@ -1,3 +1,7 @@
+## Dependencies
+
+- Docker
+
 ## How to startup
 
 From the root of the project
