@@ -14,7 +14,7 @@ Clone this repo and from the root
 /
 ```
 
-Clone repositories
+Clone subrepositories
 
 ```
 git clone git@github.com:Karmello/ask-the-world-api.git apps/ask-the-world-api
