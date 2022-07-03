@@ -1,12 +1,13 @@
 # Ask The World (startup repo)
 
-## Dependencies
+## Initial steps
 
-- Docker
+- install Docker on your machine
+- create ssh key and provide it to the owner of the repo
 
 ## How to startup
 
-From the root of the project
+Clone this repo and from the root
 
 ```
 /
