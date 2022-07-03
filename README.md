@@ -1,9 +1,21 @@
+From the root of the project
+
+```
+/
+```
+
 Clone repositories
 
 ```
-git clone git@github.com:Karmello/ask-the-world-api.git
-git clone git@github.com:Karmello/ask-the-world-fe.git
-git clone git@github.com:Karmello/ask-the-world-shared.git
+git clone git@github.com:Karmello/ask-the-world-api.git apps/ask-the-world-api
+```
+
+```
+git clone git@github.com:Karmello/ask-the-world-fe.git apps/ask-the-world-fe
+```
+
+```
+git clone git@github.com:Karmello/ask-the-world-shared.git apps/ask-the-world-shared
 ```
 
 Run MongoDB container
