@@ -15,14 +15,10 @@ services:
     container_name: api
     build:
       context: .
-      dockerfile: apps/ask-the-world-api/Dockerfile
+      dockerfile: config/Dockerfile.api
     command: yarn start-local
     ports:
       - "9000:9000"
-    # volumes:
-    #   - ./apps/ask-the-world-api:/usr/src/app
-    #   - /usr/src/app/node_modules
-    #   - ./certs:/usr/src/certs
   app:
     depends_on:
       - api
@@ -30,12 +26,8 @@ services:
     container_name: fe
     build:
       context: .
-      dockerfile: apps/ask-the-world-fe/Dockerfile
+      dockerfile: config/Dockerfile.fe
     command: yarn start-dev
     ports:
       - "3000:3000"
       - "8000:8000"
-    volumes:
-      - ./apps/ask-the-world-fe:/usr/src/app
-      - ./apps/ask-the-world-fe/node_modules:/usr/src/app/node_modules:cached
-      - ./certs:/usr/src/certs
