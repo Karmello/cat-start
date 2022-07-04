@@ -4,7 +4,6 @@
 
 - install Docker on your machine
 - create SSH key and provide it to the owner of the repo (needed for cloning private repos)
-- ask for certificates
 
 ## How to startup
 
@@ -38,17 +37,7 @@ apps/ask-the-world-api/env/env.local -> apps/ask-the-world-api/env/env
 apps/ask-the-world-fe/env/env.local -> apps/ask-the-world-fe/env/env
 ```
 
-#### Place certificates inside the repo
-
-```
-/certs
-```
-
 #### Build and run the project
-
-```
-docker-compose build app
-```
 
 ```
 docker-compose up app
@@ -57,5 +46,5 @@ docker-compose up app
 #### Verify API
 
 ```
-curl https://localhost:9000/info
+curl -k https://localhost:9000/info
 ```

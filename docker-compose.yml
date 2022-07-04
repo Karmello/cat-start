@@ -11,28 +11,31 @@ services:
   api:
     depends_on:
       - db
+    image: atw-api-image
     container_name: api
-    image: node:16
-    working_dir: /usr/src/app
     build:
       context: .
       dockerfile: apps/ask-the-world-api/Dockerfile
     command: yarn start-local
     ports:
       - "9000:9000"
-    volumes:
-      - ./apps/ask-the-world-api/src:/usr/src/app/src
+    # volumes:
+    #   - ./apps/ask-the-world-api:/usr/src/app
+    #   - /usr/src/app/node_modules
+    #   - ./certs:/usr/src/certs
   app:
     depends_on:
       - api
+    image: atw-fe-image
     container_name: fe
-    image: node:16
-    working_dir: /usr/src/app
     build:
       context: .
       dockerfile: apps/ask-the-world-fe/Dockerfile
-    command: yarn dev-server
+    command: yarn start-dev
     ports:
       - "3000:3000"
+      - "8000:8000"
     volumes:
-      - ./apps/ask-the-world-fe/src:/usr/src/app/src
+      - ./apps/ask-the-world-fe:/usr/src/app
+      - ./apps/ask-the-world-fe/node_modules:/usr/src/app/node_modules:cached
+      - ./certs:/usr/src/certs
