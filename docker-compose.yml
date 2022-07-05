@@ -16,6 +16,8 @@ services:
     build:
       context: .
       dockerfile: config/Dockerfile.api
+      args:
+        - PAT=$PAT
     command: yarn start-local
     ports:
       - "9000:9000"
@@ -27,6 +29,8 @@ services:
     build:
       context: .
       dockerfile: config/Dockerfile.fe
+      args:
+        - PAT=$PAT
     command: yarn start-dev
     ports:
       - "3000:3000"

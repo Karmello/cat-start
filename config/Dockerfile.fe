@@ -1,7 +1,10 @@
 FROM node:16
 
+ARG PAT
+ENV PAT=${PAT}
+
 WORKDIR /usr/src
-RUN git clone https://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@github.com/Karmello/ask-the-world-fe.git
+RUN git clone https://$PAT@github.com/Karmello/ask-the-world-fe.git
 
 WORKDIR /usr/src/ask-the-world-fe
 RUN yarn install
