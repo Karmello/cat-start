@@ -10,6 +10,6 @@ WORKDIR /usr/src/ask-the-world-api
 RUN yarn install
 
 WORKDIR /usr/src/ask-the-world-api/env
-RUN cp env.local env
+RUN cp .env.local .env
 
 COPY certs /usr/src/certs
