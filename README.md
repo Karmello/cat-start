@@ -2,12 +2,12 @@
 
 ## Info
 
-- this setup is best suited for development inside Docker, for that please use the "Remote - Container" vscode extension
+- this setup is best suited for development inside `Docker`, for that please use the `Remote - Container` vscode extension
 
 ## Initial steps
 
-- install Docker on your machine and start it up
-- ask for the personal access token (PAT)
+- install `Docker` on your machine and start it up
+- ask for the `personal access token (PAT)`
 
 ## How to startup
 
