@@ -18,7 +18,7 @@
 git clone https://<PAT>@github.com/Karmello/ask-the-world.git
 ```
 
-#### Fill in the .env file with the right values
+#### Create `.env` file in the root of the project and fill it in with the right values
 
 ```
 PAT=
