@@ -1,15 +1,17 @@
 FROM node:16
 
 ARG PAT
+ARG AUTH_SECRET
+ARG EMAIL_PASS
+
 ENV PAT=${PAT}
+ENV AUTH_SECRET=${AUTH_SECRET}
+ENV EMAIL_PASS=${EMAIL_PASS}
 
 WORKDIR /usr/src
 RUN git clone https://$PAT@github.com/Karmello/ask-the-world-api.git
 
 WORKDIR /usr/src/ask-the-world-api
 RUN yarn install
-
-WORKDIR /usr/src/ask-the-world-api/env
-RUN cp .env.local .env
 
 COPY certs /usr/src/certs

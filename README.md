@@ -8,6 +8,7 @@
 
 - install `Docker` on your machine and start it up
 - ask for the `personal access token (PAT)`
+- ask about `.env` file
 
 ## How to startup
 
@@ -17,10 +18,14 @@
 git clone https://<PAT>@github.com/Karmello/ask-the-world.git
 ```
 
-#### Create .env file in the root and paste the PAT string
+#### Fill in the .env file with the right values
 
 ```
-PAT=...
+PAT=
+EMAIL_PASS=
+AUTH_SECRET=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
 ```
 
 #### Run database

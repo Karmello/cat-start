@@ -17,6 +17,8 @@ services:
       dockerfile: config/Dockerfile.api
       args:
         - PAT=$PAT
+        - AUTH_SECRET=$AUTH_SECRET
+        - EMAIL_PASS=$EMAIL_PASS
     command: yarn start-local
     ports:
       - "9000:9000"
@@ -29,6 +31,8 @@ services:
       dockerfile: config/Dockerfile.fe
       args:
         - PAT=$PAT
+        - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+        - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
     command: yarn start-dev
     ports:
       - "3000:3000"
