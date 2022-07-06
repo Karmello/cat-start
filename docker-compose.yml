@@ -7,7 +7,7 @@ services:
     container_name: db
     image: mongo:5
     ports:
-      - 27017:27017
+      - 27018:27017
   api:
     depends_on:
       - db
