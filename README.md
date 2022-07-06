@@ -22,6 +22,7 @@ git clone https://<PAT>@github.com/Karmello/ask-the-world.git
 
 ```
 PAT=
+STRIPE_API_KEY=
 EMAIL_PASS=
 AUTH_SECRET=
 AWS_ACCESS_KEY_ID=
@@ -32,6 +33,12 @@ AWS_SECRET_ACCESS_KEY=
 
 ```
 docker-compose up db
+```
+
+#### Run Stripe
+
+```
+docker-compose up stripe
 ```
 
 #### Build and run API
