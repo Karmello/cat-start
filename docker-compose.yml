@@ -33,3 +33,10 @@ services:
     ports:
       - "3000:3000"
       - "8000:8000"
+  shared:
+    container_name: shared
+    build:
+      context: .
+      dockerfile: config/Dockerfile.shared
+      args:
+        - PAT=$PAT
