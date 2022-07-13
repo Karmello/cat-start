@@ -15,8 +15,6 @@ services:
       - STRIPE_API_KEY=$STRIPE_API_KEY
     command: listen --forward-to fe:3000/api/user/payment
   api:
-    depends_on:
-      - db
     container_name: api
     build:
       context: .
@@ -29,8 +27,6 @@ services:
     ports:
       - "9000:9000"
   fe:
-    depends_on:
-      - api
     container_name: fe
     build:
       context: .
