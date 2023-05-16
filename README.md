@@ -9,6 +9,7 @@
 - install `Docker` on your machine and start it up
 - ask for the `personal access token (PAT)`
 - ask about `.env` file
+- ask for `countries` and `question-categories` data 
 
 ## How to startup
 
@@ -73,4 +74,21 @@ https://localhost:8000/info
 
 ```
 https://localhost:3000
+```
+## Seed data
+
+#### Connect to database
+
+```
+mongodb://host.docker.internal:27018/ask-the-world-local
+```
+
+#### Import collections
+
+```
+countries.json >>> countries
+```
+
+```
+question-categories.json >>> questioncategories
 ```
