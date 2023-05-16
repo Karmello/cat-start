@@ -75,7 +75,7 @@ https://localhost:8000/info
 ```
 https://localhost:3000
 ```
-## Seed data
+## Prepare data
 
 #### Connect to database
 
@@ -83,7 +83,7 @@ https://localhost:3000
 mongodb://host.docker.internal:27018/ask-the-world-local
 ```
 
-#### Import collections
+#### Import static data
 
 ```
 countries.json >>> countries
@@ -91,4 +91,10 @@ countries.json >>> countries
 
 ```
 question-categories.json >>> questioncategories
+```
+
+#### Seed dynamic data (from inside API container)
+
+```
+yarn db-seed mongodb://db:27017/ask-the-world-local
 ```
