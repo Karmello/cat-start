@@ -2,14 +2,14 @@
 
 ## Info
 
-- this setup is best suited for development inside `Docker`, for that please use the `Dev Containers` vscode extension
+- this setup is best suited for development inside `Docker`
+- VSCode's `Dev Containers` extension will be useful
 
 ## Initial steps
 
-- install `Docker` on your machine and start it up
-- ask for the `personal access token (PAT)`
-- ask about `.env` file
-- ask for `countries` and `question-categories` data 
+- make sure you have `Docker` up on your machine
+- ask for `personal access token (PAT)` and `.env` file
+- ask for `countries` and `question-categories` data collections
 
 ## How to startup
 
