@@ -2,7 +2,7 @@
 
 ## Info
 
-- this setup is best suited for development inside `Docker`, for that please use the `Remote - Container` vscode extension
+- this setup is best suited for development inside `Docker`, for that please use the `Dev Containers` vscode extension
 
 ## Initial steps
 
