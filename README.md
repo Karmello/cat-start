@@ -77,6 +77,12 @@ https://localhost:3000
 ```
 ## Prepare data
 
+#### Add new entry to /etc/hosts file
+
+```
+127.0.0.1 host.docker.internal
+```
+
 #### Connect to database
 
 ```
