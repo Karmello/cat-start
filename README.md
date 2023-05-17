@@ -102,5 +102,5 @@ question-categories.json >>> questioncategories
 #### Seed dynamic data (from inside API container)
 
 ```
-yarn db-seed mongodb://db:27017/ask-the-world-local
+yarn db-seed mongodb://atw-db:27017/ask-the-world-local
 ```
