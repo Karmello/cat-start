@@ -4,18 +4,18 @@ networks:
     name: atw-net
 services:
   db:
-    container_name: db
+    container_name: atw-db
     image: mongo:5
     ports:
       - 27018:27017
   stripe:
-    container_name: stripe
+    container_name: atw-stripe
     image: stripe/stripe-cli:v1.10.3
     environment:
       - STRIPE_API_KEY=$STRIPE_API_KEY
-    command: listen --forward-to fe:3000/api/user/payment
+    command: listen --forward-to atw-fe:3000/api/user/payment
   api:
-    container_name: api
+    container_name: atw-api
     build:
       context: .
       dockerfile: config/Dockerfile.api
@@ -27,7 +27,7 @@ services:
     ports:
       - "9000:9000"
   fe:
-    container_name: fe
+    container_name: atw-fe
     build:
       context: .
       dockerfile: config/Dockerfile.fe
@@ -40,7 +40,7 @@ services:
       - "3000:3000"
       - "8000:8000"
   shared:
-    container_name: shared
+    container_name: atw-shared
     build:
       context: .
       dockerfile: config/Dockerfile.shared
