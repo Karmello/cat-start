@@ -33,13 +33,13 @@ AWS_SECRET_ACCESS_KEY=
 #### Run database
 
 ```
-docker-compose up db
+docker-compose up --detach db
 ```
 
 #### Run Stripe
 
 ```
-docker-compose up stripe
+docker-compose up --detach stripe
 ```
 
 #### Build and run API
@@ -49,7 +49,7 @@ docker-compose build --no-cache api
 ```
 
 ```
-docker-compose up api
+docker-compose up --detach api
 ```
 
 #### Build and run FE
@@ -59,7 +59,7 @@ docker-compose build --no-cache fe
 ```
 
 ```
-docker-compose up fe
+docker-compose up --detach fe
 ```
 
 #### Build and run shared repo
@@ -69,7 +69,7 @@ docker-compose build --no-cache shared
 ```
 
 ```
-docker-compose up shared
+docker-compose up --detach shared
 ```
 
 #### Verify services
