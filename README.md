@@ -62,6 +62,16 @@ docker-compose build --no-cache fe
 docker-compose up fe
 ```
 
+#### Build and run shared repo
+
+```
+docker-compose build --no-cache shared
+```
+
+```
+docker-compose up shared
+```
+
 #### Verify services
 
 ```
