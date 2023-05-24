@@ -21,6 +21,8 @@ services:
       dockerfile: config/Dockerfile.api
       args:
         - PAT=$PAT
+        - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+        - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
         - AUTH_SECRET=$AUTH_SECRET
         - EMAIL_PASS=$EMAIL_PASS
     command: yarn start-local
