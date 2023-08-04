@@ -28,6 +28,7 @@ EMAIL_PASS=
 AUTH_SECRET=
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
+API_PATH=
 ```
 
 #### Run database
@@ -85,6 +86,7 @@ https://localhost:8000/info
 ```
 https://localhost:3000
 ```
+
 ## Prepare data
 
 #### Add new entry to /etc/hosts file
