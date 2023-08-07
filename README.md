@@ -116,3 +116,15 @@ question-categories.json >>> questioncategories
 ```
 yarn db-run seed mongodb://atw-db:27017/ask-the-world-local
 ```
+
+## Other database actions
+
+#### Dump
+```
+mongodump --uri="<DATABASE_URI>"
+```
+
+#### Restore
+```
+mongorestore --uri="<DATABASE_URI>" dump/
+```
