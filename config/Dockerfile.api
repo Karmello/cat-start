@@ -23,7 +23,7 @@ ENV MONGO_URI_TEST=${MONGO_URI_TEST}
 ENV MONGO_URI_LOCAL=${MONGO_URI_LOCAL}
 
 WORKDIR /opt
-RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-ubuntu2204-x86_64-100.7.5.deb && \
+RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian11-x86_64-100.7.5.deb && \
     apt install ./mongodb-database-tools-*.deb && \
     rm -f mongodb-database-tools-*.deb
 
