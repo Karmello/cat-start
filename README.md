@@ -81,15 +81,15 @@ docker-compose up --detach shared
 #### Verify services
 
 ```
-https://localhost:9000/info
+https://localhost:9100/info
 ```
 
 ```
-https://localhost:8000/info
+https://localhost:8100/info
 ```
 
 ```
-https://localhost:3000
+https://localhost:3100
 ```
 
 ## Prepare data
@@ -125,11 +125,13 @@ yarn db-run seed mongodb://atw-db:27017/ask-the-world-local
 ## Other database actions
 
 #### Dump
+
 ```
 mongodump --uri="<DATABASE_URI>"
 ```
 
 #### Restore
+
 ```
 mongorestore --uri="<DATABASE_URI>" dump/
 ```

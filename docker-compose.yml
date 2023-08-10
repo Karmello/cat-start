@@ -32,7 +32,7 @@ services:
         - MONGO_URI_LOCAL=$MONGO_URI_LOCAL
     command: yarn start-local
     ports:
-      - "9000:9000"
+      - "9100:9100"
   fe:
     container_name: atw-fe
     build:
@@ -45,8 +45,8 @@ services:
         - API_PATH=$API_PATH
     command: yarn start-dev
     ports:
-      - "3000:3000"
-      - "8000:8000"
+      - "3100:3100"
+      - "8100:8100"
   shared:
     container_name: atw-shared
     build:
