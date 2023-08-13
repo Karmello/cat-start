@@ -9,9 +9,10 @@ services:
     ports:
       - 27018:27017
     environment:
-      - MONGO_INITDB_DATABASE=db
       - MONGO_INITDB_ROOT_USERNAME=$MONGO_INITDB_ROOT_USERNAME
       - MONGO_INITDB_ROOT_PASSWORD=$MONGO_INITDB_ROOT_PASSWORD
+    volumes:
+      - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
   stripe:
     container_name: atw-stripe
     image: stripe/stripe-cli:v1.10.3
