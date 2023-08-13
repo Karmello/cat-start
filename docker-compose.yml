@@ -8,6 +8,10 @@ services:
     image: mongo:5
     ports:
       - 27018:27017
+    environment:
+      - MONGO_INITDB_DATABASE=admin
+      - MONGO_INITDB_ROOT_USERNAME=$MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_INITDB_ROOT_PASSWORD
   stripe:
     container_name: atw-stripe
     image: stripe/stripe-cli:v1.10.3
