@@ -11,7 +11,7 @@
 - ask for `personal access token (PAT)` and `.env` file
 - ask for `countries` and `question-categories` data collections
 
-## How to startup
+## How to startup local environment
 
 #### Clone this repo using https and the PAT
 
@@ -22,16 +22,25 @@ git clone https://<PAT>@github.com/Karmello/ask-the-world.git
 #### Create `.env` file in the root of the project and fill it in with the right values
 
 ```
+// github personal access token
 PAT=
+// Stripe payment service api key
 STRIPE_API_KEY=
+// Google recaptcha site key
 RECAPTCHA_SITE_KEY=
+// app email account password
 EMAIL_PASS=
+// secret for creating tokens
 AUTH_SECRET=
+// AWS S3 credentials
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
+// api
 API_PATH=
+// mongo admin user credentials
 MONGO_INITDB_ROOT_USERNAME=
 MONGO_INITDB_ROOT_PASSWORD=
+// mongo uri's for different environments
 MONGO_URI_PROD=
 MONGO_URI_STAGING=
 MONGO_URI_MASTER=
