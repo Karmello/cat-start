@@ -103,26 +103,10 @@ https://localhost:3100
 127.0.0.1 host.docker.internal
 ```
 
-#### Connect to database
+#### Seed data (from inside API container)
 
 ```
-mongodb://host.docker.internal:27018/ask-the-world-local
-```
-
-#### Import static data
-
-```
-countries.json >>> countries
-```
-
-```
-question-categories.json >>> questioncategories
-```
-
-#### Seed dynamic data (from inside API container)
-
-```
-yarn db-run seed mongodb://atw-db:27017/ask-the-world-local
+yarn db local seed
 ```
 
 ## Other database actions
