@@ -24,6 +24,7 @@ git clone https://<PAT>@github.com/Karmello/ask-the-world.git
 ```
 PAT=
 STRIPE_API_KEY=
+RECAPTCHA_SITE_KEY=
 EMAIL_PASS=
 AUTH_SECRET=
 AWS_ACCESS_KEY_ID=
