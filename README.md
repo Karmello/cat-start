@@ -111,6 +111,12 @@ https://localhost:8100/info
 https://localhost:3100
 ```
 
+#### Get a bash shell in the container
+
+```
+docker exec -it atw-fe /bin/bash
+```
+
 ## Database actions (from inside API container)
 
 #### Seed data
