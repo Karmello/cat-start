@@ -111,13 +111,7 @@ https://localhost:8100/info
 https://localhost:3100
 ```
 
-#### Get a bash shell in the container
-
-```
-docker exec -it atw-fe /bin/bash
-```
-
-## Database actions (from inside API container)
+## Database actions
 
 #### Seed data
 
@@ -135,4 +129,18 @@ mongodump --uri="<DATABASE_URI>"
 
 ```
 mongorestore --uri="<DATABASE_URI>" dump/
+```
+
+## Getting bash shell
+
+#### Docker
+
+```
+docker exec -it atw-fe /bin/bash
+```
+
+#### Heroku
+
+```
+heroku run bash -a atw-api-br-main
 ```
