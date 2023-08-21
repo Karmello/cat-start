@@ -6,7 +6,7 @@ ENV PAT=${PAT}
 WORKDIR /usr/src
 RUN git clone https://$PAT@github.com/Karmello/ask-the-world-fe.git
 
-WORKDIR /usr/src
+WORKDIR /usr/src/ask-the-world-fe
 RUN yarn clone-shared
 
 WORKDIR /usr/src/ask-the-world-fe

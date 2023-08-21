@@ -11,7 +11,7 @@ RUN wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-debian11-x86
 WORKDIR /usr/src
 RUN git clone https://$PAT@github.com/Karmello/ask-the-world-api.git
 
-WORKDIR /usr/src
+WORKDIR /usr/src/ask-the-world-api
 RUN yarn clone-shared
 
 WORKDIR /usr/src/ask-the-world-api
