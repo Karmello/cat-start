@@ -71,6 +71,8 @@ services:
       - DONATION_PAYMENT_LINK=$DONATION_PAYMENT_LINK
       - FULL_ACCOUNT_PAYMENT_LINK=$FULL_ACCOUNT_PAYMENT_LINK
       - RECAPTCHA_SITE_KEY=$RECAPTCHA_SITE_KEY
+    volumes:
+      - ./coverage:/usr/src/ask-the-world-fe/coverage
   shared:
     container_name: atw-shared
     build:
