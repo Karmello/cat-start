@@ -5,6 +5,27 @@
 - this setup is best suited for development inside `Docker`
 - VSCode's `Dev Containers` extension will be useful
 
+
+```mermaid
+classDiagram
+AskTheWorld --> DB : Container 1
+AskTheWorld --> API : Container 2 (repo)
+AskTheWorld --> FE : Container 3 (repo)
+AskTheWorld --> Shared : Container 4 (repo)
+AskTheWorld --> Stripe : Container 5
+AskTheWorld : Docker start-up repository
+AskTheWorld: scripts/build.sh()
+AskTheWorld: scripts/start.sh()
+DB: Mongo
+API: Node, TypeScript
+FE: Node, Webpack, React, TypeScript
+Shared: TypeScript
+Shared: git clone()
+Shared: git pull()
+API --|> Shared
+FE --|> Shared
+```
+
 ## Initial steps
 
 - make sure you have `Docker` up on your machine
