@@ -19,6 +19,7 @@ AskTheWorld: scripts/start.sh()
 DB: Mongo
 API: Node, TypeScript
 FE: Node, Webpack, React, TypeScript
+Stripe: payment service
 Shared: TypeScript
 Shared: git clone()
 Shared: git pull()
