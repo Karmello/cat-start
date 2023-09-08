@@ -161,6 +161,14 @@ mongorestore --uri="<DATABASE_URI>" dump/
 docker exec -it atw-fe /bin/bash
 ```
 
+```
+docker exec -it atw-api /bin/bash
+```
+
+```
+docker exec -it atw-shared /bin/bash
+```
+
 #### Heroku
 
 ```
