@@ -1,10 +1,7 @@
 # Ask The World (startup repo)
-
 ## About
-
 - this setup is best suited for development inside `Docker`
 - VSCode's `Dev Containers` extension will be useful
-
 
 ```mermaid
 classDiagram
@@ -28,28 +25,22 @@ FE --|> Shared
 ```
 
 ## Initial steps
-
 - make sure you have `Docker` up on your machine
 - ask for `environment variables`
 
 ## OS
-
 #### Add new entry to /etc/hosts file
-
 ```
 127.0.0.1 host.docker.internal
 ```
 
 ## How to startup local environment
-
 #### Clone this repo using https and GitHub personal access token
-
 ```
 git clone https://<PAT>@github.com/Karmello/ask-the-world.git
 ```
 
 #### Create `.env` file in the root of the project and fill it in with the right values
-
 ```
 // GitHub personal access token
 PAT=
@@ -78,99 +69,88 @@ MONGO_URI_LOCAL=
 ```
 
 #### Run Stripe (optional)
-
 ```
 docker-compose up --detach stripe
 ```
 
 #### Run database
-
 ```
 docker-compose up --detach db
 ```
 
 #### Build and run API
-
 ```
 docker-compose build --no-cache api
 ```
-
 ```
 docker-compose up --detach api
 ```
 
 #### Build and run FE
-
 ```
 docker-compose build --no-cache fe
 ```
-
 ```
 docker-compose up --detach fe
 ```
 
 #### Build and run shared repo
-
 ```
 docker-compose build --no-cache shared
 ```
-
 ```
 docker-compose up --detach shared
 ```
 
 #### Verify services
-
 ```
 https://localhost:9100/info
 ```
-
 ```
 https://localhost:8100/info
 ```
-
 ```
 https://localhost:3100
 ```
 
-## Database actions
-
-#### Seed data
-
-```
-yarn db local seed
-```
-
-#### Dump db
-
-```
-mongodump --uri="<DATABASE_URI>"
-```
-
-#### Restore db
-
-```
-mongorestore --uri="<DATABASE_URI>" dump/
-```
-
 ## Getting bash shell
-
 #### Docker
-
 ```
 docker exec -it atw-fe /bin/bash
 ```
-
 ```
 docker exec -it atw-api /bin/bash
 ```
-
 ```
 docker exec -it atw-shared /bin/bash
 ```
 
 #### Heroku
-
 ```
 heroku run bash -a atw-api-br-main
+```
+
+## Database actions
+- there's `db` folder in the root of API repository
+- it contains ready scripts to perform all sorts of db actions
+
+#### Available actions
+```
+seed | empty | check | notify | copyto | edit
+```
+
+#### Available environments
+```
+local | master | staging | prod
+```
+
+#### Examples
+```
+yarn db local seed
+```
+```
+yarn db prod check
+```
+```
+yarn db prod copyto staging
 ```
