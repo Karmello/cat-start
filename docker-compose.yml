@@ -61,7 +61,7 @@ services:
     ports:
       - "3100:3100"
       - "8100:8100"
-      - "10000:10000"
+      - "10100:10100"
     environment:
       - NODE_ENV=$NODE_ENV
       - CLIENT_PORT=$CLIENT_PORT
