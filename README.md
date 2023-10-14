@@ -14,7 +14,7 @@ AskTheWorld --> Shared : Container 4 (repo)
 AskTheWorld --> Stripe : Container 5
 AskTheWorld : Docker start-up repository
 AskTheWorld: cmd/build.sh()
-AskTheWorld: cmd/start.sh()
+AskTheWorld: cmd/up.sh()
 DB: Mongo
 API: Node, TypeScript
 FE: Node, Webpack, React, TypeScript
@@ -127,7 +127,7 @@ docker-compose up --detach shared
 #### Manage all services at once using bash scripts
 
 ```
-cmd/stop
+cmd/down
 ```
 
 ```
@@ -135,7 +135,7 @@ cmd/build
 ```
 
 ```
-cmd/start
+cmd/up
 ```
 
 #### Verify services
