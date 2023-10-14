@@ -50,30 +50,37 @@ git clone https://<PAT>@github.com/Karmello/ask-the-world.git
 #### Create `.env` file in the root of the project and fill it in with the right values
 
 ```
-// GitHub personal access token
-PAT=
-// Stripe payment service api key
-STRIPE_API_KEY=
-// Google recaptcha site key
-RECAPTCHA_SITE_KEY=
-// app email account password
-EMAIL_PASS=
-// secret for creating tokens
-AUTH_SECRET=
-// AWS S3 credentials
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-// api
+NODE_ENV=
+CLIENT_PORT=
+SERVER_PORT=
+API_PORT=
+API_PORT_TEST=
+FE_URL=
+API_URL=
 API_PATH=
-// Mongo admin user credentials
+FULL_ACCOUNT_PAYMENT_REQUIRED=
 MONGO_INITDB_ROOT_USERNAME=
 MONGO_INITDB_ROOT_PASSWORD=
-// Mongo uri's for different environments
-MONGO_URI_PROD=
-MONGO_URI_STAGING=
-MONGO_URI_MASTER=
+MONGO_URI=
 MONGO_URI_TEST=
+#MONGO_URI_TEST=
 MONGO_URI_LOCAL=
+MONGO_URI_MASTER=
+MONGO_URI_STAGING=
+MONGO_URI_PROD=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_BUCKET_URL=
+AWS_BUCKET_NAME=
+STRIPE_API_KEY=
+DONATION_PAYMENT_LINK=
+FULL_ACCOUNT_PAYMENT_LINK=
+EMAIL_USER=
+EMAIL_PASS=
+PAT=
+RECAPTCHA_SITE_KEY=
+AUTH_SECRET=
+HONEYBADGER_API_KEY=
 ```
 
 #### Run Stripe (optional)
