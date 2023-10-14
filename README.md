@@ -82,19 +82,19 @@ AUTH_SECRET=
 HONEYBADGER_API_KEY=
 ```
 
-#### Run Stripe (optional)
+#### Start Stripe (optional)
 
 ```
 docker-compose up --detach stripe
 ```
 
-#### Run database
+#### Start database
 
 ```
 docker-compose up --detach db
 ```
 
-#### Build and run API
+#### Build and start API
 
 ```
 docker-compose build --no-cache api
@@ -104,7 +104,7 @@ docker-compose build --no-cache api
 docker-compose up --detach api
 ```
 
-#### Build and run FE
+#### Build and start FE
 
 ```
 docker-compose build --no-cache fe
@@ -114,7 +114,7 @@ docker-compose build --no-cache fe
 docker-compose up --detach fe
 ```
 
-#### Build and run shared repo
+#### Build and start shared repo
 
 ```
 docker-compose build --no-cache shared
@@ -122,6 +122,20 @@ docker-compose build --no-cache shared
 
 ```
 docker-compose up --detach shared
+```
+
+#### Manage all services at once using bash scripts
+
+```
+cmd/stop
+```
+
+```
+cmd/build
+```
+
+```
+cmd/start
 ```
 
 #### Verify services
