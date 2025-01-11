@@ -20,10 +20,10 @@ Stripe: payment service
 Shared: TypeScript
 Shared: git clone()
 Shared: git pull()
-CAT --> Shared : Container 4 (repo)
-CAT --> Stripe : Container 5
 API --|> Shared
 APP --|> Shared
+CAT --> Shared : Container 4 (repo)
+CAT --> Stripe : Container 5
 ```
 
 ## Initial steps
