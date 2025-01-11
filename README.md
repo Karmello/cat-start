@@ -10,7 +10,6 @@ classDiagram
 CAT --> DB : Container 1
 CAT --> API : Container 2 (repo)
 CAT --> APP : Container 3 (repo)
-CAT --> Shared : Container 4 (repo)
 CAT : Docker start-up repository
 CAT: cmd/build.sh()
 CAT: cmd/up.sh()
@@ -23,6 +22,7 @@ Shared: git clone()
 Shared: git pull()
 API --|> Shared
 APP --|> Shared
+CAT --> Shared : Container 4 (repo)
 CAT --> Stripe : Container 5
 ```
 
