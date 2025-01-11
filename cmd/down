@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-docker-compose stop db
-docker-compose stop api
-docker-compose stop app
-docker-compose stop shared
+docker-compose stop cat-db
+docker-compose stop cat-api
+docker-compose stop cat-app
+docker-compose stop cat-shared

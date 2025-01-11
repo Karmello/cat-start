@@ -3,7 +3,7 @@ networks:
   default:
     name: cat-net
 services:
-  db:
+  cat-db:
     container_name: cat-db
     image: mongo:5
     ports:
@@ -13,13 +13,13 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=$MONGO_INITDB_ROOT_PASSWORD
     volumes:
       - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-  stripe:
+  cat-stripe:
     container_name: cat-stripe
     image: stripe/stripe-cli:v1.10.3
     environment:
       - STRIPE_API_KEY=$STRIPE_API_KEY
     command: listen --forward-to cat-app:3000/api/user/payment
-  api:
+  cat-api:
     container_name: cat-api
     build:
       context: .
@@ -50,7 +50,7 @@ services:
       - MONGO_URI_MASTER=$MONGO_URI_MASTER
       - HONEYBADGER_API_KEY=$HONEYBADGER_API_KEY
       - FULL_ACCOUNT_PAYMENT_REQUIRED=$FULL_ACCOUNT_PAYMENT_REQUIRED
-  app:
+  cat-app:
     container_name: cat-app
     build:
       context: .
@@ -74,7 +74,7 @@ services:
       - RECAPTCHA_SITE_KEY=$RECAPTCHA_SITE_KEY
     volumes:
       - ./coverage:/usr/src/cat-app/coverage
-  shared:
+  cat-shared:
     container_name: cat-shared
     build:
       context: .

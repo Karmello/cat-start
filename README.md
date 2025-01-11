@@ -83,43 +83,43 @@ HONEYBADGER_API_KEY=
 #### Start Stripe (optional)
 
 ```
-docker-compose up --detach stripe
+docker-compose up --detach cat-stripe
 ```
 
 #### Start database
 
 ```
-docker-compose up --detach db
+docker-compose up --detach cat-db
 ```
 
 #### Build and start API
 
 ```
-docker-compose build --no-cache api
+docker-compose build --no-cache cat-api
 ```
 
 ```
-docker-compose up --detach api
+docker-compose up --detach cat-api
 ```
 
 #### Build and start APP
 
 ```
-docker-compose build --no-cache app
+docker-compose build --no-cache cat-app
 ```
 
 ```
-docker-compose up --detach app
+docker-compose up --detach cat-app
 ```
 
 #### Build and start shared repo
 
 ```
-docker-compose build --no-cache shared
+docker-compose build --no-cache cat-shared
 ```
 
 ```
-docker-compose up --detach shared
+docker-compose up --detach cat-shared
 ```
 
 #### Manage all services at once using bash scripts
@@ -139,15 +139,15 @@ cmd/up
 #### Verify services
 
 ```
-https://localhost:9100/info
+http://localhost:9100
 ```
 
 ```
-https://localhost:8100/info
+http://localhost:8100/info
 ```
 
 ```
-https://localhost:3100
+http://localhost:3100
 ```
 
 ## Getting bash shell
