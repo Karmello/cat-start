@@ -17,12 +17,12 @@ Shared: TypeScript
 Shared: git clone()
 Shared: git pull()
 Stripe: payment service
-API --|> Shared
-APP --|> Shared
 CAT --> DB : Container 1
 CAT --> API : Container 2 (repo)
 CAT --> APP : Container 3 (repo)
 CAT --> Shared : Container 4 (repo)
+API --|> Shared
+APP --|> Shared
 CAT --> Stripe : Container 5
 ```
 
