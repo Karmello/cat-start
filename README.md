@@ -20,10 +20,10 @@ Stripe: payment service
 CAT --> DB : Container 1
 CAT --> API : Container 2 (repo)
 CAT --> APP : Container 3 (repo)
-API --|> Shared
 APP --|> Shared
 CAT --> Shared : Container 4 (repo)
 CAT --> Stripe : Container 5
+API --|> Shared
 ```
 
 ## Initial steps
