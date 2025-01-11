@@ -16,7 +16,6 @@ CAT: cmd/up.sh()
 DB: Mongo
 API: Node, TypeScript
 APP: Node, Webpack, React, TypeScript
-Stripe: payment service
 Shared: TypeScript
 Shared: git clone()
 Shared: git pull()
@@ -24,6 +23,7 @@ API --|> Shared
 APP --|> Shared
 CAT --> Shared : Container 4 (repo)
 CAT --> Stripe : Container 5
+Stripe: payment service
 ```
 
 ## Initial steps
