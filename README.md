@@ -22,8 +22,8 @@ CAT --> API : Container 2 (repo)
 CAT --> APP : Container 3 (repo)
 CAT --> Shared : Container 4 (repo)
 CAT --> Stripe : Container 5
-APP --|> Shared
 API --|> Shared
+APP --|> Shared
 ```
 
 ## Initial steps
