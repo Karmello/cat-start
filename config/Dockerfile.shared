@@ -4,9 +4,9 @@ ARG PAT
 ENV PAT=${PAT}
 
 WORKDIR /usr/src
-RUN git clone https://$PAT@github.com/Karmello/ask-the-world-shared.git
+RUN git clone https://$PAT@github.com/Karmello/cat-shared.git
 
-WORKDIR /usr/src/ask-the-world-shared
+WORKDIR /usr/src/cat-shared
 RUN yarn install
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]

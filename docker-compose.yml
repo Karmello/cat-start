@@ -1,10 +1,10 @@
 version: "3.9"
 networks:
   default:
-    name: atw-net
+    name: cat-net
 services:
   db:
-    container_name: atw-db
+    container_name: cat-db
     image: mongo:5
     ports:
       - 27018:27017
@@ -14,13 +14,13 @@ services:
     volumes:
       - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
   stripe:
-    container_name: atw-stripe
+    container_name: cat-stripe
     image: stripe/stripe-cli:v1.10.3
     environment:
       - STRIPE_API_KEY=$STRIPE_API_KEY
-    command: listen --forward-to atw-fe:3000/api/user/payment
+    command: listen --forward-to cat-app:3000/api/user/payment
   api:
-    container_name: atw-api
+    container_name: cat-api
     build:
       context: .
       dockerfile: config/Dockerfile.api
@@ -50,11 +50,11 @@ services:
       - MONGO_URI_MASTER=$MONGO_URI_MASTER
       - HONEYBADGER_API_KEY=$HONEYBADGER_API_KEY
       - FULL_ACCOUNT_PAYMENT_REQUIRED=$FULL_ACCOUNT_PAYMENT_REQUIRED
-  fe:
-    container_name: atw-fe
+  app:
+    container_name: cat-app
     build:
       context: .
-      dockerfile: config/Dockerfile.fe
+      dockerfile: config/Dockerfile.app
       args:
         - PAT=$PAT
     command: yarn start-dev
@@ -73,9 +73,9 @@ services:
       - FULL_ACCOUNT_PAYMENT_LINK=$FULL_ACCOUNT_PAYMENT_LINK
       - RECAPTCHA_SITE_KEY=$RECAPTCHA_SITE_KEY
     volumes:
-      - ./coverage:/usr/src/ask-the-world-fe/coverage
+      - ./coverage:/usr/src/cat-app/coverage
   shared:
-    container_name: atw-shared
+    container_name: cat-shared
     build:
       context: .
       dockerfile: config/Dockerfile.shared

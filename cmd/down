@@ -1,6 +1,6 @@
-#!/usr/bin/bash 
+#!/usr/bin/bash
 
 docker-compose stop db
 docker-compose stop api
-docker-compose stop fe
+docker-compose stop app
 docker-compose stop shared

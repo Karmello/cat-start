@@ -1,4 +1,4 @@
-# Ask The World (startup repo)
+# CAT (startup repo)
 
 ## About
 
@@ -7,23 +7,23 @@
 
 ```mermaid
 classDiagram
-AskTheWorld --> DB : Container 1
-AskTheWorld --> API : Container 2 (repo)
-AskTheWorld --> FE : Container 3 (repo)
-AskTheWorld --> Shared : Container 4 (repo)
-AskTheWorld --> Stripe : Container 5
-AskTheWorld : Docker start-up repository
-AskTheWorld: cmd/build.sh()
-AskTheWorld: cmd/up.sh()
+CAT --> DB : Container 1
+CAT --> API : Container 2 (repo)
+CAT --> FE : Container 3 (repo)
+CAT --> Shared : Container 4 (repo)
+CAT --> Stripe : Container 5
+CAT : Docker start-up repository
+CAT: cmd/build.sh()
+CAT: cmd/up.sh()
 DB: Mongo
 API: Node, TypeScript
-FE: Node, Webpack, React, TypeScript
+APP: Node, Webpack, React, TypeScript
 Stripe: payment service
 Shared: TypeScript
 Shared: git clone()
 Shared: git pull()
 API --|> Shared
-FE --|> Shared
+APP --|> Shared
 ```
 
 ## Initial steps
@@ -44,7 +44,7 @@ FE --|> Shared
 #### Clone this repo using https and GitHub personal access token
 
 ```
-git clone https://<PAT>@github.com/Karmello/ask-the-world.git
+git clone https://<PAT>@github.com/Karmello/cat-start.git
 ```
 
 #### Create `.env` file in the root of the project and fill it in with the right values
@@ -104,14 +104,14 @@ docker-compose build --no-cache api
 docker-compose up --detach api
 ```
 
-#### Build and start FE
+#### Build and start APP
 
 ```
-docker-compose build --no-cache fe
+docker-compose build --no-cache app
 ```
 
 ```
-docker-compose up --detach fe
+docker-compose up --detach app
 ```
 
 #### Build and start shared repo
@@ -157,21 +157,21 @@ https://localhost:3100
 #### Docker
 
 ```
-docker exec -it atw-fe /bin/bash
+docker exec -it cat-app /bin/bash
 ```
 
 ```
-docker exec -it atw-api /bin/bash
+docker exec -it cat-api /bin/bash
 ```
 
 ```
-docker exec -it atw-shared /bin/bash
+docker exec -it cat-shared /bin/bash
 ```
 
 #### Heroku
 
 ```
-heroku run bash -a atw-api-br-main
+heroku run bash -a cat-api-development
 ```
 
 ## Database actions
@@ -188,7 +188,7 @@ seed | empty | check | notify | copyto | edit
 #### Available environments
 
 ```
-local | master | staging | prod
+local | dev | stag | prod
 ```
 
 #### Examples
@@ -202,5 +202,5 @@ yarn db prod check
 ```
 
 ```
-yarn db prod copyto staging
+yarn db prod copyto stag
 ```
