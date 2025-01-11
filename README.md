@@ -9,7 +9,7 @@
 classDiagram
 CAT --> DB : Container 1
 CAT --> API : Container 2 (repo)
-CAT --> FE : Container 3 (repo)
+CAT --> APP : Container 3 (repo)
 CAT --> Shared : Container 4 (repo)
 CAT --> Stripe : Container 5
 CAT : Docker start-up repository
