@@ -18,11 +18,11 @@ Shared: git clone()
 Shared: git pull()
 Stripe: payment service
 CAT --> DB : Container 1
+API --|> Shared
 CAT --> API : Container 2 (repo)
 CAT --> APP : Container 3 (repo)
 CAT --> Shared : Container 4 (repo)
 CAT --> Stripe : Container 5
-API --|> Shared
 ```
 
 ## Initial steps
