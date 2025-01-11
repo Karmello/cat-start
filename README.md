@@ -7,9 +7,6 @@
 
 ```mermaid
 classDiagram
-CAT --> DB : Container 1
-CAT --> API : Container 2 (repo)
-CAT --> APP : Container 3 (repo)
 CAT : Docker start-up repository
 CAT: cmd/build.sh()
 CAT: cmd/up.sh()
@@ -19,11 +16,14 @@ APP: Node, Webpack, React, TypeScript
 Shared: TypeScript
 Shared: git clone()
 Shared: git pull()
+Stripe: payment service
+CAT --> DB : Container 1
+CAT --> API : Container 2 (repo)
+CAT --> APP : Container 3 (repo)
 API --|> Shared
 APP --|> Shared
 CAT --> Shared : Container 4 (repo)
 CAT --> Stripe : Container 5
-Stripe: payment service
 ```
 
 ## Initial steps
