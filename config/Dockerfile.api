@@ -1,4 +1,4 @@
-FROM node:20.10.0
+FROM node:22.13
 
 ARG PAT
 ENV PAT=${PAT}
