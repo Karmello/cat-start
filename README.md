@@ -8,8 +8,8 @@
 ```mermaid
 sequenceDiagram
 CAT: Docker start-up repository
-CAT: cmd/build()
-CAT: cmd/up()
+CAT: cmd/build
+CAT: cmd/up
 DB: Mongo
 API: Node, TypeScript
 APP: Node, Webpack, React, TypeScript
