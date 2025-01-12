@@ -9,7 +9,7 @@
 flowchart TD
   CAT --> |cat-db container| Mongo
   CAT --> |cat-api container| Node
-  CAT --> |cat-app container| React
+  CAT --> |cat-fe container| React
   CAT --> |cat-shared container| Shared
   CAT --> |cat-stripe container| Stripe
 ```
@@ -95,11 +95,11 @@ docker-compose up --detach cat-api
 #### Build and start APP
 
 ```
-docker-compose build --no-cache cat-app
+docker-compose build --no-cache cat-fe
 ```
 
 ```
-docker-compose up --detach cat-app
+docker-compose up --detach cat-fe
 ```
 
 #### Build and start shared repo
@@ -145,7 +145,7 @@ http://localhost:3100
 #### Docker
 
 ```
-docker exec -it cat-app /bin/bash
+docker exec -it cat-fe /bin/bash
 ```
 
 ```

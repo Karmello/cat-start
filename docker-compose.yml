@@ -18,7 +18,7 @@ services:
     image: stripe/stripe-cli:v1.10.3
     environment:
       - STRIPE_API_KEY=$STRIPE_API_KEY
-    command: listen --forward-to cat-app:3000/api/user/payment
+    command: listen --forward-to cat-fe:3000/api/user/payment
   cat-api:
     container_name: cat-api
     build:
@@ -50,11 +50,11 @@ services:
       - MONGO_URI_MASTER=$MONGO_URI_MASTER
       - HONEYBADGER_API_KEY=$HONEYBADGER_API_KEY
       - FULL_ACCOUNT_PAYMENT_REQUIRED=$FULL_ACCOUNT_PAYMENT_REQUIRED
-  cat-app:
-    container_name: cat-app
+  cat-fe:
+    container_name: cat-fe
     build:
       context: .
-      dockerfile: config/Dockerfile.app
+      dockerfile: config/Dockerfile.fe
       args:
         - PAT=$PAT
     command: yarn start-dev
@@ -73,7 +73,7 @@ services:
       - FULL_ACCOUNT_PAYMENT_LINK=$FULL_ACCOUNT_PAYMENT_LINK
       - RECAPTCHA_SITE_KEY=$RECAPTCHA_SITE_KEY
     volumes:
-      - ./coverage:/usr/src/cat-app/coverage
+      - ./coverage:/usr/src/cat-fe/coverage
   cat-shared:
     container_name: cat-shared
     build:
