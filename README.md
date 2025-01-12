@@ -8,14 +8,14 @@
 ```mermaid
 classDiagram
 CAT : Docker start-up repository
-CAT: cmd/build.sh()
-CAT: cmd/up.sh()
+CAT: cmd/build
+CAT: cmd/up
 DB: Mongo
 API: Node, TypeScript
 APP: Node, Webpack, React, TypeScript
 Shared: TypeScript
-Shared: git clone()
-Shared: git pull()
+Shared: git clone
+Shared: git pull
 Stripe: payment service
 CAT --> DB : Container 1
 CAT --> API : Container 2 (repo)
