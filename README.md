@@ -6,10 +6,10 @@
 - VSCode's `Dev Containers` extension will be useful
 
 ```mermaid
-classDiagram
-CAT : Docker start-up repository
-CAT: cmd/build
-CAT: cmd/up
+sequenceDiagram
+CAT: Docker start-up repository
+CAT: cmd/build()
+CAT: cmd/up()
 DB: Mongo
 API: Node, TypeScript
 APP: Node, Webpack, React, TypeScript
