@@ -6,18 +6,12 @@
 - VSCode's `Dev Containers` extension will be useful
 
 ```mermaid
-classDiagram
-CAT: Docker start-up repository
-DB: Mongo
-API: Node, TypeScript
-APP: Node, Webpack, React, TypeScript
-Shared: TypeScript
-Stripe: payment service
-CAT --> DB : Container 1
-CAT --> API : Container 2 (repo)
-CAT --> APP : Container 3 (repo)
-CAT --> Shared : Container 4 (repo)
-CAT --> Stripe : Container 5
+flowchart TD
+  CAT --> |cat-db container| Mongo
+  CAT --> |cat-api container| Node
+  CAT --> |cat-app container| React
+  CAT --> |cat-shared container| Shared
+  CAT --> |cat-stripe container| Stripe
 ```
 
 ## Initial steps
