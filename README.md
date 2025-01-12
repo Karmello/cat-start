@@ -6,7 +6,7 @@
 - VSCode's `Dev Containers` extension will be useful
 
 ```mermaid
-classDiagram
+flowchart LR
 CAT: Docker start-up repository
 DB: Mongo
 API: Node, TypeScript
