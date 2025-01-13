@@ -172,7 +172,7 @@ heroku run bash -a cat-api-development
 #### Available actions
 
 ```
-seed | empty | check | notify | copyto | edit
+seed | seed-static | empty | check | notify | copyto | edit
 ```
 
 #### Available environments
