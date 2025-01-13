@@ -1,6 +1,6 @@
 # CAT (startup repo)
 
-[About](#about) | [Initial steps](#initial-steps) | [OS](#os) | [Local env](#how-to-startup-local-environment) | [Bash scripts](manage-all-services-at-once-using-bash-scripts) | [Bash shell](getting-bash-shell) | [DB actions](database-actions)
+[About](#about) | [Initial steps](#initial-steps) | [OS](#os) | [Local env](#how-to-startup-local-environment) | [Bash scripts](#manage-all-services-at-once-using-bash-scripts) | [Bash shell](#getting-bash-shell) | [DB actions](#database-actions)
 
 ## About
 
