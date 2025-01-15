@@ -94,7 +94,7 @@ docker-compose build --no-cache cat-api
 docker-compose up --detach cat-api
 ```
 
-#### Build and start APP
+#### Build and start FE
 
 ```
 docker-compose build --no-cache cat-fe
