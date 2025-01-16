@@ -70,6 +70,7 @@ PAT=
 RECAPTCHA_SITE_KEY=
 AUTH_SECRET=
 HONEYBADGER_API_KEY=
+OPENAI_API_KEY=
 ```
 
 #### Start Stripe (optional)
