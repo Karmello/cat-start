@@ -51,6 +51,7 @@ services:
       - HONEYBADGER_API_KEY=$HONEYBADGER_API_KEY
       - FULL_ACCOUNT_PAYMENT_REQUIRED=$FULL_ACCOUNT_PAYMENT_REQUIRED
       - OPENAI_API_KEY=$OPENAI_API_KEY
+      - ADMIN_USER_ID=$ADMIN_USER_ID
   cat-fe:
     container_name: cat-fe
     build:
