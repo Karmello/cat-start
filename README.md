@@ -54,7 +54,7 @@ MONGO_INITDB_ROOT_PASSWORD=
 MONGO_URI=
 MONGO_URI_TEST=
 MONGO_URI_LOCAL=
-MONGO_URI_MASTER=
+MONGO_URI_DEV=
 MONGO_URI_STAGING=
 MONGO_URI_PROD=
 AWS_ACCESS_KEY_ID=
@@ -180,7 +180,7 @@ seed | seed-static | empty | check | notify | copyto | edit
 #### Available environments
 
 ```
-local | dev | stag | prod
+local | dev | staging | prod
 ```
 
 #### Examples
@@ -194,5 +194,5 @@ yarn db prod check
 ```
 
 ```
-yarn db prod copyto stag
+yarn db prod copyto staging
 ```
