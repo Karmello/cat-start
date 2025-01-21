@@ -1,6 +1,6 @@
 networks:
   default:
-    name: cat-net
+    name: cat_net
 services:
   cat-db:
     container_name: cat-db
