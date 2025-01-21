@@ -77,43 +77,43 @@ OPENAI_API_KEY=
 #### Start Stripe (optional)
 
 ```
-docker-compose up --detach cat-stripe
+docker compose up --detach cat-stripe
 ```
 
 #### Start database
 
 ```
-docker-compose up --detach cat-db
+docker compose up --detach cat-db
 ```
 
 #### Build and start API
 
 ```
-docker-compose build --no-cache cat-api
+docker compose build --no-cache cat-api
 ```
 
 ```
-docker-compose up --detach cat-api
+docker compose up --detach cat-api
 ```
 
 #### Build and start FE
 
 ```
-docker-compose build --no-cache cat-fe
+docker compose build --no-cache cat-fe
 ```
 
 ```
-docker-compose up --detach cat-fe
+docker compose up --detach cat-fe
 ```
 
 #### Build and start shared repo
 
 ```
-docker-compose build --no-cache cat-shared
+docker compose build --no-cache cat-shared
 ```
 
 ```
-docker-compose up --detach cat-shared
+docker compose up --detach cat-shared
 ```
 
 #### Manage all services at once using bash scripts
