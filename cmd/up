@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-docker-compose up --detach cat-db
-docker-compose up --detach cat-api
-docker-compose up --detach cat-fe
-docker-compose up --detach cat-shared
+docker compose up --detach cat-db
+docker compose up --detach cat-api
+docker compose up --detach cat-fe
+docker compose up --detach cat-shared
