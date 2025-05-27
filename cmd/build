@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+export COMPOSE_BAKE=true
+
 docker compose build --no-cache cat-api
 docker compose build --no-cache cat-fe
 docker compose build --no-cache cat-shared
