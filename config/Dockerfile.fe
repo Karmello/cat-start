@@ -8,7 +8,6 @@ RUN git clone https://$PAT@github.com/Karmello/cat-fe.git
 
 WORKDIR /usr/src/cat-fe
 RUN yarn clone-shared
-RUN yarn clone-bb
 
 WORKDIR /usr/src/cat-fe
 RUN yarn install
