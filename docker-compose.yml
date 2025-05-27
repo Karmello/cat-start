@@ -25,7 +25,6 @@ services:
       dockerfile: config/Dockerfile.api
       args:
         - PAT=$PAT
-    command: yarn start-local
     ports:
       - "9100:9100"
     environment:
@@ -58,7 +57,6 @@ services:
       dockerfile: config/Dockerfile.fe
       args:
         - PAT=$PAT
-    command: yarn start-dev
     ports:
       - "3100:3100"
       - "8100:8100"

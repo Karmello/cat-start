@@ -11,3 +11,5 @@ RUN yarn clone-shared
 
 WORKDIR /usr/src/cat-fe
 RUN yarn install
+
+CMD ["yarn", "start-dev", ";", "tail", "-f", "/dev/null"]

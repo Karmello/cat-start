@@ -16,3 +16,5 @@ RUN yarn clone-shared
 
 WORKDIR /usr/src/cat-api
 RUN yarn install
+
+CMD ["yarn", "start-local", ";", "tail", "-f", "/dev/null"]
