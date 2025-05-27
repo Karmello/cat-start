@@ -4,3 +4,4 @@ docker compose stop cat-db
 docker compose stop cat-api
 docker compose stop cat-fe
 docker compose stop cat-shared
+docker compose stop cat-stripe
