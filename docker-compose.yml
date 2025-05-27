@@ -20,6 +20,7 @@ services:
     command: listen --forward-to cat-fe:3000/api/user/payment
   cat-api:
     container_name: cat-api
+    tty: true
     build:
       context: .
       dockerfile: config/Dockerfile.api
@@ -53,6 +54,7 @@ services:
       - ADMIN_USER_ID=$ADMIN_USER_ID
   cat-fe:
     container_name: cat-fe
+    tty: true
     build:
       context: .
       dockerfile: config/Dockerfile.fe
@@ -78,6 +80,7 @@ services:
       - ./coverage:/usr/src/cat-fe/coverage
   cat-shared:
     container_name: cat-shared
+    tty: true
     build:
       context: .
       dockerfile: config/Dockerfile.shared
