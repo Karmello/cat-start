@@ -8,8 +8,8 @@ services:
     ports:
       - 27018:27017
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=$MONGO_INITDB_ROOT_USERNAME
-      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_INITDB_ROOT_PASSWORD
+      - MONGO_USER=$MONGO_USER
+      - MONGO_PASS=$MONGO_PASS
     volumes:
       - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
   cat-stripe:
@@ -38,8 +38,8 @@ services:
       - AUTH_SECRET=$AUTH_SECRET
       - EMAIL_USER=$EMAIL_USER
       - EMAIL_PASS=$EMAIL_PASS
-      - MONGO_INITDB_ROOT_USERNAME=$MONGO_INITDB_ROOT_USERNAME
-      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_INITDB_ROOT_PASSWORD
+      - MONGO_USER=$MONGO_USER
+      - MONGO_PASS=$MONGO_PASS
       - MONGO_URI=$MONGO_URI
       - MONGO_URI_LOCAL=$MONGO_URI_LOCAL
       - MONGO_URI_TEST=$MONGO_URI_TEST
